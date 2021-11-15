@@ -1,0 +1,32 @@
+.photo {
+   &__title {
+      margin-top: 45px;
+      margin-bottom: 38px;
+      padding: 37px;
+      background: #ffffff;
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 23px;
+      /* identical to box height */
+
+      text-transform: uppercase;
+
+      color: #615346;
+
+      @include media-breakpoint-down(md) {
+         padding: 20px;
+         font-size: 16px;
+         line-height: 20px;
+         margin-top: 25px;
+         margin-bottom: 25px;
+      }
+   }
+
+   &__img-box {
+      // margin-right: 30px;
+   }
+   &__img {
+      width: 100%;
+      height: 100%;
+   }
+}
