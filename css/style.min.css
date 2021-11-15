@@ -6330,6 +6330,7 @@ body {
 }
 @media (max-width: 767.98px) {
   .menu__callback-number {
+    display: block;
     font-weight: bold;
     font-size: 18px;
     line-height: 23px;
