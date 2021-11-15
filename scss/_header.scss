@@ -195,14 +195,17 @@
    }
 
    &__callback-number {
-      font-weight: bold;
-      font-size: 18px;
-      line-height: 23px;
-      color: white;
-      margin-top: 20px;
+      display: none;
+      @include media-breakpoint-down(md) {
+         font-weight: bold;
+         font-size: 18px;
+         line-height: 23px;
+         color: white;
+         margin-top: 20px;
 
-      &:before {
-         padding-right: 5px;
+         &:before {
+            padding-right: 5px;
+         }
       }
    }
 
@@ -215,12 +218,16 @@
       font-weight: bold;
       font-size: 14px;
       line-height: 18px;
-      margin-top: 25px;
+
       /* identical to box height */
 
       text-transform: uppercase;
 
       color: #000000;
+
+      @include media-breakpoint-down(md) {
+         margin-top: 25px;
+      }
    }
    &__callback-txt {
       margin-left: 5px;

@@ -6324,14 +6324,19 @@ body {
   }
 }
 .menu__callback-number {
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 23px;
-  color: white;
-  margin-top: 20px;
+  display: none;
 }
-.menu__callback-number:before {
-  padding-right: 5px;
+@media (max-width: 767.98px) {
+  .menu__callback-number {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 23px;
+    color: white;
+    margin-top: 20px;
+  }
+  .menu__callback-number:before {
+    padding-right: 5px;
+  }
 }
 .menu__callback-button {
   display: -webkit-box;
@@ -6348,10 +6353,14 @@ body {
   font-weight: bold;
   font-size: 14px;
   line-height: 18px;
-  margin-top: 25px;
   /* identical to box height */
   text-transform: uppercase;
   color: #000000;
+}
+@media (max-width: 767.98px) {
+  .menu__callback-button {
+    margin-top: 25px;
+  }
 }
 .menu__callback-txt {
   margin-left: 5px;
