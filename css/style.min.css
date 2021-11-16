@@ -6216,11 +6216,18 @@ body {
   height: 24px;
   border: none;
   border-top: 2px solid #000000;
-  border-bottom: 2px solid #000000;
   background-color: transparent;
   position: relative;
   -ms-touch-action: manipulation;
       touch-action: manipulation;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
+@media (max-width: 767.98px) {
+  .header__burger-btn {
+    display: block;
+  }
 }
 .header__burger-btn:before {
   content: "";
@@ -6231,10 +6238,36 @@ body {
   left: 0;
   top: 9px;
 }
-@media (max-width: 767.98px) {
-  .header__burger-btn {
-    display: block;
-  }
+.header__burger-btn:after {
+  content: "";
+  position: absolute;
+  width: 35px;
+  height: 2px;
+  background-color: #000000;
+  left: 0;
+  bottom: 0;
+}
+.header__burger-btn.active {
+  border-top: 0;
+  margin-top: 9px;
+}
+.header__burger-btn.active:before {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+  top: 0;
+}
+.header__burger-btn.active:after {
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+  bottom: 21px;
 }
 
 .menu {

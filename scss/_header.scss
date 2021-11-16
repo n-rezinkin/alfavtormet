@@ -94,10 +94,15 @@
       height: 24px;
       border: none;
       border-top: 2px solid #000000;
-      border-bottom: 2px solid #000000;
+      // border-bottom: 2px solid #000000;
       background-color: transparent;
       position: relative;
       touch-action: manipulation;
+      transition: 0.4s;
+
+      @include media-breakpoint-down(md) {
+         display: block;
+      }
 
       &:before {
          content: "";
@@ -107,10 +112,43 @@
          background-color: #000000;
          left: 0;
          top: 9px;
+
+         // @include media-breakpoint-down(md) {
+         //    transform: rotate(45deg);
+         //    transition: 0.4s;
+         //    top: 0;
+         // }
+      }
+      &:after {
+         content: "";
+         position: absolute;
+         width: 35px;
+         height: 2px;
+         background-color: #000000;
+         left: 0;
+         bottom: 0;
+         // @include media-breakpoint-down(md) {
+         //    transform: rotate(-45deg);
+         //    transition: 0.4s;
+         //    bottom: 21px;
+         // }
       }
 
-      @include media-breakpoint-down(md) {
-         display: block;
+      &.active {
+         border-top: 0;
+         margin-top: 9px;
+
+         &:before {
+            transform: rotate(45deg);
+            transition: 0.4s;
+            top: 0;
+         }
+
+         &:after {
+            transform: rotate(-45deg);
+            transition: 0.4s;
+            bottom: 21px;
+         }
       }
    }
 }
@@ -131,7 +169,6 @@
       background: #615346;
       z-index: 3;
       margin-top: 0;
-
       width: 100%;
    }
    &.active {
