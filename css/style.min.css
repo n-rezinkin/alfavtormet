@@ -6216,6 +6216,7 @@ body {
   height: 24px;
   border: none;
   border-top: 2px solid #000000;
+  border-bottom: 2px solid transparent;
   background-color: transparent;
   position: relative;
   -ms-touch-action: manipulation;
@@ -6236,7 +6237,7 @@ body {
   height: 2px;
   background-color: #000000;
   left: 0;
-  top: 9px;
+  top: 8px;
 }
 .header__burger-btn:after {
   content: "";
