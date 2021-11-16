@@ -6121,6 +6121,12 @@ body {
   background: url("../img/price-photo.jpg") top no-repeat;
   background-size: cover;
 }
+.price .col-md-6:first-of-type {
+  padding-right: 0;
+}
+.price .col-md-6:last-of-type {
+  padding-left: 0;
+}
 
 .header {
   background: #ffffff;
